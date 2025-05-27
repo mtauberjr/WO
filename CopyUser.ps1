@@ -8,7 +8,7 @@ $userName = $env:USERNAME
 $backupRoot = "$PSScriptRoot\Backup"
 $backupFolder = Join-Path $backupRoot "$pcName\$userName"
 
-
+# Chrome Automation 
 $proc = 'Chrome'
 Start-Process $proc
 Start-Sleep 2
@@ -28,22 +28,10 @@ start-Sleep 2
 $wshell.SendKeys("{ENTER}")
 start-Sleep 2
 
-
-
-
-
 cmd /c "rundll32.exe keymgr.dll,KRShowKeyMgr"
-
-
-
-#$chromePath = "C:\Program Files\Google\Chrome\Application\chrome.exe"  # Adjust if Chrome is installed elsewhere
-#$url = "chrome://password-manager/settings"
-
-#Start-Process -FilePath $chromePath -ArgumentList $url
 
 $Shell = New-Object -ComObject "WScript.Shell"
 $Button = $Shell.Popup("After exporting Chrome passwords and bookmarks, click OK to copy the files.", 0, "Export", 0)
-
 
 # List of special folders to back up
 $specialFolders = @(
@@ -59,7 +47,6 @@ foreach ($folderName in $specialFolders) {
         Copy-Item -Path $source -Destination $destination -Recurse -Force
     }
 }
-
 
 #Start-Process explorer.exe -ArgumentList $env:LOCALAPPDATA
 $Shell = New-Object -ComObject "WScript.Shell"
