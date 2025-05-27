@@ -24,7 +24,7 @@ start-Sleep 2
 $wshell.SendKeys("^{t}")
 start-Sleep 3
 $wshell.SendKeys('chrome://bookmarks/')
-start-Sleep 3
+start-Sleep 2
 $wshell.SendKeys("{ENTER}")
 start-Sleep 2
 
