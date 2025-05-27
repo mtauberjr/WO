@@ -11,10 +11,10 @@ $backupFolder = Join-Path $backupRoot "$pcName\$userName"
 
 $proc = 'Chrome'
 Start-Process $proc
-Start-Sleep 5
+Start-Sleep 4
 $wshell = New-Object -ComObject wscript.shell;
 $wshell.AppActivate("$proc")
-Start-Sleep 5
+Start-Sleep 4
 $wshell.SendKeys("^{t}")
 start-Sleep 3
 $wshell.SendKeys('chrome://password-manager/settings')
