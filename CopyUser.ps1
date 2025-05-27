@@ -15,6 +15,8 @@ Start-Sleep 5
 $wshell = New-Object -ComObject wscript.shell;
 $wshell.AppActivate("$proc")
 Start-Sleep 5
+$wshell.SendKeys("^{t}")
+start-Sleep 3
 $wshell.SendKeys('chrome://password-manager/settings')
 start-Sleep 3
 $wshell.SendKeys("{ENTER}")
