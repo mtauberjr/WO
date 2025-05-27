@@ -65,6 +65,6 @@ foreach ($folderName in $specialFolders) {
 $Shell = New-Object -ComObject "WScript.Shell"
 $Button = $Shell.Popup("Backup complete: $pcName - $userName", 0, "Complete", 0)
 Start-Process explorer.exe -ArgumentList $PSScriptRoot\Backup\$pcName\$userName
-#Get-Process -Name "cmd" | Stop-Process -Force -ErrorAction Continue
+Get-Process -Name "cmd" | Stop-Process -Force -ErrorAction Continue
 #Write-Host "Backup complete: $backupFolder"
 Exit
