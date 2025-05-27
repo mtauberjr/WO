@@ -61,6 +61,6 @@ foreach ($folderName in $specialFolders) {
 }
 
 Start-Process explorer.exe -ArgumentList $PSScriptRoot\Backup\$pcName\$userName
-Start-Process explorer.exe -ArgumentList $env:LOCALAPPDATA
+#Start-Process explorer.exe -ArgumentList $env:LOCALAPPDATA
 
 Write-Host "Backup complete: $backupFolder"
