@@ -1,5 +1,5 @@
 #Close Chrome
-Get-Process -Name "chrome" | Stop-Process -Force
+Get-Process -Name "chrome" | Stop-Process -Force -ErrorAction Continue
 
 # Backup user files to a folder named with PC name and username
 
