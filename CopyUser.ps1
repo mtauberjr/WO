@@ -42,7 +42,7 @@ cmd /c "rundll32.exe keymgr.dll,KRShowKeyMgr"
 #Start-Process -FilePath $chromePath -ArgumentList $url
 
 $Shell = New-Object -ComObject "WScript.Shell"
-$Button = $Shell.Popup("Click OK to copy files...after Chrome/Credential Store export of passwords is completed.", 0, "Passwords", 0)
+$Button = $Shell.Popup("Once the Chrome/Credential Store password export is complete, click "OK" to proceed with copying the files.", 0, "Export", 0)
 
 
 # List of special folders to back up
