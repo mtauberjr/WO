@@ -1,9 +1,13 @@
+#Close Chrome
+Get-Process -Name "chrome" | Stop-Process -Force
+
 # Backup user files to a folder named with PC name and username
 
 $pcName = $env:COMPUTERNAME
 $userName = $env:USERNAME
 $backupRoot = "$PSScriptRoot\Backup"
 $backupFolder = Join-Path $backupRoot "$pcName\$userName"
+
 
 $proc = 'Chrome'
 Start-Process $proc
