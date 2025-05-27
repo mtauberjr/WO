@@ -62,5 +62,7 @@ foreach ($folderName in $specialFolders) {
 
 Start-Process explorer.exe -ArgumentList $PSScriptRoot\Backup\$pcName\$userName
 #Start-Process explorer.exe -ArgumentList $env:LOCALAPPDATA
-
-Write-Host "Backup complete: $backupFolder"
+$Shell = New-Object -ComObject "WScript.Shell"
+$Button = $Shell.Popup("Cick OK to Close Backup complete: $backupFolder", 0, "Complete", 0)
+#Write-Host "Backup complete: $backupFolder"
+Exit
