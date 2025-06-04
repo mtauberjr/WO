@@ -49,7 +49,8 @@ $specialFolders = @(
     'MyDocuments',
     'MyMusic',
     'MyVideos',
-    'MyDownloads' 
+    'MyDownloads',
+    'Downloads' 
 )
 
 foreach ($folderName in $specialFolders) {
